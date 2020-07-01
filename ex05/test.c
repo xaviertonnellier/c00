@@ -6,7 +6,7 @@
 /*   By: xtonnell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:23:22 by xtonnell          #+#    #+#             */
-/*   Updated: 2020/07/01 21:51:47 by xtonnell         ###   ########.fr       */
+/*   Updated: 2020/07/01 21:51:51 by xtonnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,7 @@ void	ft_print_comb(void)
 			n[2] = n[1] + 1;
 			while (n[2] <= '9')
 			{
-				ft_putchar(n[0]);
-				ft_putchar(n[1]);
-				ft_putchar(n[2]);
-				if (n[0] >= '7')
-				{
-				}
-				else
-				{
-				ft_putchar(',');
-				ft_putchar(' ');
+				ft_putchar2();
 				n[2]++;
 				}
 			}
@@ -49,6 +40,27 @@ void	ft_print_comb(void)
 		}
 		n[0]++;
 	}
+}
+void	ft_putchar2(char c)
+{
+	char n[3];
+
+	n[0] = '0';
+	n[1] = '1';
+	n[2] = '2';
+
+		ft_putchar(n[0]);
+				ft_putchar(n[1]);
+				ft_putchar(n[2]);
+				if (n[0] >= '7')
+				{
+					ft_putchar('d');
+				}
+				else
+				{
+				ft_putchar(',');
+				ft_putchar(' ');
+				}
 }
 int	main()
 {

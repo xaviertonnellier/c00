@@ -6,7 +6,7 @@
 /*   By: xtonnell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 13:56:30 by xtonnell          #+#    #+#             */
-/*   Updated: 2020/07/01 18:07:23 by xtonnell         ###   ########.fr       */
+/*   Updated: 2020/07/01 21:36:01 by xtonnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,8 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_is_negative(void)
+void	ft_is_negative(int n)
 {
-	int n;
-
-	n = -2;
 	if (n < 0)
 	{
 		write(1, "N", 1);
