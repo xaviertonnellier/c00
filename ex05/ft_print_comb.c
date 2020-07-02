@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   slt.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xtonnell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/01 14:23:22 by xtonnell          #+#    #+#             */
-/*   Updated: 2020/07/01 21:51:47 by xtonnell         ###   ########.fr       */
+/*   Created: 2020/07/02 11:42:15 by xtonnell          #+#    #+#             */
+/*   Updated: 2020/07/02 12:38:22 by xtonnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	ft_print_comb(void)
 	char n[3];
 
 	n[0] = '0';
-	n[1] = '1';
-	n[2] = '2';
 	while (n[0] <= '9')
 	{
 		n[1] = n[0] + 1;
@@ -35,22 +33,20 @@ void	ft_print_comb(void)
 				ft_putchar(n[0]);
 				ft_putchar(n[1]);
 				ft_putchar(n[2]);
-				if (n[0] >= '7')
+				if (n[0] != '7')
 				{
+					ft_putchar(',');
+					ft_putchar(' ');
 				}
-				else
-				{
-				ft_putchar(',');
-				ft_putchar(' ');
 				n[2]++;
-				}
 			}
 			n[1]++;
 		}
 		n[0]++;
 	}
 }
-int	main()
+
+int main()
 {
 	ft_print_comb();
 }

@@ -6,7 +6,7 @@
 /*   By: xtonnell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 15:28:35 by xtonnell          #+#    #+#             */
-/*   Updated: 2020/07/01 18:25:42 by xtonnell         ###   ########.fr       */
+/*   Updated: 2020/07/02 12:26:22 by xtonnell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ void	ft_print_comb2(void)
 			ft_putchar(' ');
 			ft_putchar('0' + (n[1] / 10));
 			ft_putchar('0' + (n[1] % 10));
-			ft_putchar(',');
-			ft_putchar(' ');
+			if (n[0] != 98)
+			{
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
 		}
 	}
 }
